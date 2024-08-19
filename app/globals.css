@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border list-none p-0 m-0 scroll-smooth;
+  }
+
+  body {
+    @apply bg-[#262626] text-dark-1 min-h-screen font-poppins;
+  }
+
+  h1 {
+    @apply text-xl font-semibold leading-[140%] tracking-tighter;
+  }
+
+  h2 {
+    @apply text-lg font-semibold leading-[140%] tracking-tighter;
+  }
+
+  h3 {
+    @apply text-base font-semibold leading-[140%] tracking-tighter;
+  }
+
+  p {
+    @apply text-base font-normal leading-[140%];
+  }
+
+  pre {
+    @apply bg-light-3 p-4 rounded-lg my-4;
+  }
+
+  code {
+    font-family: monospace;
+    font-size: 1.05em;
+    font-weight: 500;
+    line-height: 1rem;
+    padding: 0.225rem;
+    letter-spacing: 1px;
+    white-space: pre-wrap;
+    background-color: #000;
+    border-radius: 10px;
+  }
+
+  strong {
+    font-weight: 500;
+  }
+}
+
+.split {
+  display: flex;
+  flex-direction: row;
+}
+
+.gutter {
+  background-color: #eee;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.gutter:hover {
+  background-color: #ddd;
+}
+
+.gutter.gutter-horizontal {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==");
+  cursor: col-resize;
+}
+
+.gutter.gutter-vertical,
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+.gutter.gutter-vertical {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAFAQMAAABo7865AAAABlBMVEVHcEzMzMzyAv2sAAAAAXRSTlMAQObYZgAAABBJREFUeF5jOAMEEAIEEFwAn3kMwcB6I2AAAAAASUVORK5CYII=");
+  cursor: row-resize;
+  width: 100%;
+}
+
+.example-card pre {
+  background-color: #d9d9d9;
+  border-radius: 0.5rem;
+  font-size: 0.98rem;
+  line-height: 1.25rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  white-space: pre-wrap;
+}
+
+.example-card pre strong {
+  font-size: 1rem;
+}
+
+.cm-editor {
+  height: 100% !important;
+}
+
+.cm-scroller {
+  height: 100% !important;
+}
+.cm-focused {
+  outline: none !important;
+}
+
+li {
+  list-style-type: disc;
+}
+
+.cm-theme {
+  width: 100%;
+  height: 100%;
+}
+
+/* styles/glow.css */
+
+.glow-effect {
+  position: relative;
+}
+
+.glow-effect {
+  border-radius: 50%;
+  animation: glowAnimation 3s infinite alternate;
+  z-index: -1;
+}
+
+@keyframes glowAnimation {
+  0% {
+    filter: drop-shadow(0 0 10px #9aa3af22);
+  }
+  100% {
+    filter: drop-shadow(0 0 20px #9aa3af);
+  }
+}
+
+.glow-effect img {
+  animation: glowAnimation 2s infinite alternate;
+}
+
+.cm-editor.cm-focused {
+  outline: none !important;
+}
+
+.cm-editor {
+  padding: 0.5em;
+}
+.cm-editor .cm-scroller {
+  font-family: "Roboto Mono", monospace;
+}
